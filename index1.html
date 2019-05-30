@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <title>ATP-Logic</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+ // Defining a function to set size for #hero 
+    function fullscreen(){
+        jQuery('.banner_image img').css({
+            //width: jQuery(window).width(),
+            height: jQuery(window).height()
+        });
+    }
+  
+    fullscreen();
+
+  // Run the function in case of window resize
+  jQuery(window).resize(function() {
+       fullscreen();         
+    });
+
+
+
+
+
+  /*Video Play Pause*/
+
+  var vid = document.getElementById("video_section");
+  var pauseButton = document.querySelector("#pause #play");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+
+
+});
+</script>
+
+</head>
+<body>
+
+<div class="hero">
+  <div class="banner_image">
+        <video autoplay loop muted class="wrapper__video" id="video_section" poster="images/banner-2.jpg">
+            <source src="http://vimeo-hp-videos.global.ssl.fastly.net/3/3.mp4">
+        </video> 
+    </div>
+
+<!-- Header -->
+<header>
+  
+  <div class="container-fluid">
+    <div class="row desktop_header">
+      <div class="col-xs-3 first-col">
+        <div class="list_type">
+          <ul>
+            <li><a href="index1.html">ru</a></li>
+            <li><a href="index1_en.html">en</a></li>
+          </ul>
+        </div>
+        <div class="search_icon">
+          <img src="images/search.png" alt="search">
+        </div>
+      </div>
+
+      <div class="col-xs-6 mid-col">
+        <ul class="head_icon">
+          <li>
+            <a href="#"><img src="images/passenger-Information.png" class="img-responsive" alt="מידע לנוסע"><span>מידע לנוסע</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/purchase-tickets.png" class="img-responsive" alt="רכישת"><span>רכישת</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/about.png" class="img-responsive" alt="אודות"><span>אודות</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/contact-us.png" class="img-responsive" alt="צור קשר"><span>צור קשר</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/more.png" class="img-responsive" alt="עוד"><span>עוד</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-xs-3 last-col">
+        <div class="image_icon">
+          <a href="#"><img src="images/x.png" alt=""></a>
+        </div>
+        <div class="list_type_last">
+          <ul>
+            <li><a href="#"><img src="images/a.png" alt=""></a></li>
+            <li><a href="#">א<span>א</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="mobile_header">
+      
+      <div class="row">
+        <div class="col-xs-4">
+
+          <div class="menu_bar">
+            <button type="button" class="navbar-toggle"> 
+              <span class="icon-bar"></span>  
+              <span class="icon-bar"></span>  
+              <span class="icon-bar"></span> 
+            </button>
+          </div>
+          
+          <div class="search">
+            <i class="fas fa-search"></i>
+          </div>
+          
+          
+        </div>
+
+        <div class="col-xs-4">
+          <div class="mobile_icon">
+            <a href="#"><img src="images/s-x.png" class="moblileicon"></a>
+          </div>
+        </div>
+
+        <div class="col-xs-4">
+          <div class="language_div">
+            <div class="select_language">
+              <form>
+                <div class="form-group">
+                  <select class="form-control" id="sel1">
+                    <option value="he"><a href="#">he</a></option>
+                    <option value="en"><a href="#">en</a></option>
+                  </select>
+                </div>
+              </form>
+            </div>  
+
+            <a href="index1_en.html" class="one">א<span>א</span></a>
+            
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ../ Header -->
+
+<!-- mobile -->
+
+<div class="banner_indicator mobile_enabled" >
+        <a href="#"><img src="images/pause.png" alt="pause"></a>
+        <a href="#"><img src="images/next.png" alt="next"></a>
+        <a href="#"><img src="images/previous.png" alt="previous"></a>
+</div>
+<!-- Mobile -->
+
+
+<!-- Banner -->
+
+<section class="banner">
+
+  <div class="banner_inner">
+      
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-sm-12">
+
+              <div class="banner_specialisation mobile_disable">
+                <h3>חיפוש נסיעה</h3>
+                <ul>
+                  <li><span><img src="images/how-do.png" alt="איך אני מגיע מ"></span>איך אני מגיע מ...</li>
+                  <li><span><img src="images/search-by.png" alt="חיפוש לפי מוצא ויעד"></span>חיפוש לפי מוצא ויעד</li>
+                  <li><span><img src="images/realtime-search.png" alt="חיפוש זמן אמת"></span>חיפוש זמן אמת</li>
+                  <li><span><img src="images/search-by-line.png" alt="חיפוש לפי קו"></span>חיפוש לפי קו</li>
+                </ul>
+              </div>
+
+              <div class="banner_header">
+                <h1>מובילים את</h1>
+                <h1>תחבורת העתיד</h1>
+              </div>
+
+              <div class="banner_indicator mobile_disable" id="pause">
+                <a href="#"><img src="images/pause.png" alt="pause"  id="play"></a>
+                <a href="#"><img src="images/next.png" alt="next"></a>
+                <a href="#"><img src="images/previous.png" alt="previous"></a>
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+
+<!-- ../ Banner -->
+
+</div>
+
+
+
+
+<!-- Section 2 -->
+
+<section class="section_post mobile_disable">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-15 col-xs-15">
+          <article>
+            <div class="post_head">
+                <span><img src="images/public-transport.png" alt="תחבורה ציבורית"></span>
+              תחבורה ציבורית
+              <a href="#"><span class="icon_arrow"><i class="fas fa-chevron-left"></i></span></a>
+            </div>
+            <img src="images/public-transport-image.jpg" class="post_img" alt="תחבורה ציבורית">
+          </article>
+      </div>
+
+      <div class="col-md-15 col-xs-15">
+          <article>
+            <div class="post_head">
+                <span><img src="images/light-trains.png" alt="כבות קלות"></span>
+              רכבות קלות
+              <a href="#"><span class="icon_arrow"><i class="fas fa-chevron-left"></i></span></a>
+            </div>
+            <img src="images/light-trains-image.jpg" class="post_img" alt="כבות קלות">
+          </article>
+      </div>
+
+      <div class="col-md-15 col-xs-15">
+          <article>
+            <div class="post_head">
+                <span><img src="images/transportation.png" alt="הסעים ותיור"></span>
+              הסעים ותיור
+              <a href="#"><span class="icon_arrow"><i class="fas fa-chevron-left"></i></span></a>
+            </div>
+            <img src="images/transportation-image.jpg" class="post_img" alt="הסעים ותיור">
+          </article>
+      </div>
+
+      <div class="col-md-15 col-xs-15">
+          <article>
+            <div class="post_head">
+                <a href="#"><span><img src="images/service-and-maintenance.png" alt="שירות ותחזוקה"></span></a>
+              שירות ותחזוקה
+              <a href="#"><span class="icon_arrow"><i class="fas fa-chevron-left"></i></span></a>
+            </div>
+            <img src="images/service-and-maintenance-image.jpg" class="post_img" alt="שירות ותחזוקה">
+          </article>
+      </div>
+
+      <div class="col-md-15 col-xs-15">
+          <article>
+            <div class="post_head">
+                <span><img src="images/egged-europe.png" alt="אגד אירופה"></span>
+              אגד אירופה
+              <a href="#"><span class="icon_arrow"><i class="fas fa-chevron-left"></i></span></a>
+            </div>
+            <img src="images/egged-europe-image.jpg" class="post_img" alt="אגד אירופה">
+          </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile Section -->
+
+<section class="mobile_enabled">
+  <div class="container-fluid">
+    <div class="row">
+      <article class="icon_article">
+        
+          <h4> <span><img src="images/public-transport.png" alt="תחבורה ציבורית"></span><a href="#">תחבורה ציבורית <img class="readmore" src="images/arrow.png" alt="readmore"></a></h4>
+      </article>
+      <article class="icon_article">
+          
+         <h4><span><img src="images/light-trains.png" alt="כבות קלות"></span><a href="#"> רכבות קלות <img class="readmore" src="images/arrow.png" alt="readmore"></a></h4>
+      </article>
+      <article class="icon_article">
+         
+         <h4><span><img src="images/transportation.png" alt="הסעים ותיור"></span><a href="#">הסעים  ותיור <img class="readmore" src="images/arrow.png" alt="readmore"></a></h4>
+      </article>
+      <article class="icon_article">
+         <h4><span><img src="images/service-and-maintenance.png" alt="שירות ותחזוקה"></span><a href="#"> שירות ותחזוקה <img class="readmore" src="images/arrow.png" alt="readmore"></a></h4>
+      </article>
+      <article class="icon_article">
+          <h4><span><img src="images/egged-europe.png" alt="אגד אירופה"></span><a href="#">אגד אירופה <img class="readmore" src="images/arrow.png" alt="readmore"></a></h4>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ../ Mobile Section -->
+
+
+<!-- ../ Section 2 -->
+
+<!-- section popup -->
+
+
+<section class="popup mobile_enabled">
+  <div class="container-fluid">
+    <!-- Trigger the modal with a button -->
+    <div class="find_ride">
+    <button type="button" class="ride_panel" data-toggle="modal" data-target="#myModal"><img src="images/add.png"></button>
+      <p class="image_box"><img src="images/map-icon.png" class="ride_icon"> </p> 
+      <p>למצוא <br> נסיעה</p>
+      
+    </div>
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+
+        <button type="button" class="close" data-dismiss="modal"><img src="images/cross.png"></button>
+          <div class="banner_specialisation">
+                <h3>חיפוש נסיעה</h3>
+                <ul>
+                  <li><span><img src="images/how-do.png" alt="איך אני מגיע מ"></span>איך אני מגיע מ...</li>
+                  <li><span><img src="images/search-by.png" alt="חיפוש לפי מוצא ויעד"></span>חיפוש לפי מוצא ויעד</li>
+                  <li><span><img src="images/realtime-search.png" alt="חיפוש זמן אמת"></span>חיפוש זמן אמת</li>
+                  <li><span><img src="images/search-by-line.png" alt="חיפוש לפי קו"></span>חיפוש לפי קו</li>
+                </ul>
+          </div>
+      
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- section popup -->
+
+<!-- Section 3 -->
+
+<section class="section3">
+
+<div class="container-fluid">
+  <div class="row mobile_disable">
+    <div class="col-sm-10 notification_div">
+      <div class="row">
+        <a href="#"><img src="images/next-1.png" class="arraw_right" alt="previous"></a>
+
+        <article>
+          <div class="notify_inner">
+            <p><strong>16:31 <span>|</span> 03.04.2019 </strong></p>
+            <p>תל אביב-יפו, עבודות לילה בקטע משדרות ירושלים - בין התאריכי...</p>
+            <p><a href="#"><strong>המשך קריאה</strong></a> &nbsp;&nbsp;<img src="images/arrow.png" alt="readmore"></p>
+          </div>
+        </article>
+        
+        <article>
+          <div class="notify_inner">
+            <p><strong>16:31 <span>|</span> 03.04.2019 </strong></p>
+            <p>תל אביב-יפו, עבודות לילה בקטע משדרות ירושלים - בין התאריכי...</p>
+            <p><a href="#"><strong>המשך קריאה</strong></a> &nbsp;&nbsp;<img src="images/arrow.png" alt="readmore"></p>
+          </div>
+        </article>
+
+        <article>
+          <div class="notify_inner">
+            <p><strong>16:31 <span>|</span> 03.04.2019 </strong></p>
+            <p>תל אביב-יפו, עבודות לילה בקטע משדרות ירושלים - בין התאריכי...</p>
+            <p><a href="#"><strong>המשך קריאה</strong></a> &nbsp;&nbsp;<img src="images/arrow.png" alt="readmore"></p>
+          </div>
+        </article>
+
+        <article>
+          <div class="notify_inner">
+            <p><strong>16:31 <span>|</span> 03.04.2019 </strong></p>
+            <p>תל אביב-יפו, עבודות לילה בקטע משדרות ירושלים - בין התאריכי...</p>
+            <p><a href="#"><strong>המשך קריאה</strong></a> &nbsp;&nbsp;<img src="images/arrow.png" alt="readmore"></p>
+          </div>
+        </article>
+
+        <a href="#"><img src="images/previous-1.png" class="arraw_left" alt="next"></a>
+
+      </div>
+    </div>
+    <div class="col-sm-2 text-center">
+      <div class="div_container">
+        <p class="text1">עדכונים</p>
+      <p class="text2">שוטפים</p>
+
+      <a href="#" class="btn btn-primary badget_btn">לכל העדכונים &nbsp;&nbsp;<img src="images/for-all-updates.png" alt="refresh"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- For Mobile Only -->
+  <div class="row mobile_enabled">
+    <div class="col-xs-12 notification_div text-center">
+      <div class="row">
+        <a href="#"><img src="images/next-1.png" class="arraw_right" alt="previous"></a>
+        <article>
+          <div class="notify_inner">
+            <p><strong>16:31 <span>|</span> 03.04.2019 </strong></p>
+            <p>תל אביב-יפו, עבודות לילה בקטע משדרות ירושלים - בין התאריכי...</p>
+            <p><a href="#"><strong>המשך קריאה</strong></a> &nbsp;&nbsp;<img src="images/arrow.png" alt="readmore"></p>
+          </div>
+        </article>
+        <a href="#"><img src="images/previous-1.png" class="arraw_left" alt="next"></a>
+        <div class="text-center">
+          <a href="#" class="btn btn-primary badget_btn">לכל העדכונים</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ../ For Mobile Only -->
+
+
+
+</div>
+  
+</section>
+
+<!-- ../ Section 3 -->
+
+
+<!-- Section 4 -->
+
+<section id="section4">
+
+<div class="container-fluid">
+    <div class="section_header text-center">
+      <h2>המגזין של אגד</h2>
+      <p>חדשות וטכנולוגיה בתחום התחבורה</p>
+    </div>
+  <div class="row mobile_disable">
+    <div class="col-sm-4 section_image">
+      <a href="#"><img src="images/egged's-magazine-1.jpg" class="img-responsive" alt="קריירה לכל החיים באגד מתחילה"></a>
+
+      <div class="image_text">
+        <a href="#"><p><span>קריירה לכל החיים באגד מתחילה</span></p>
+        <p><span>בצעד אחד קטן ומהיר</span></p></a>
+      </div>
+    </div>
+    <div class="col-sm-4 section_image">
+      <a href="#"><img src="images/egged's-magazine-2.jpg" class="img-responsive" alt="עוברים לתחבורה ירוקה וסביבתית"></a>
+
+      <div class="image_text">
+        <a href="#"><p><span>עוברים לתחבורה ירוקה וסביבתית</span></p>
+        <p><span>לעתיד מוצלח ובריא יותר</span></p></a>
+      </div>
+    </div>
+    <div class="col-sm-4 section_image">
+      <a href="#"><img src="images/egged's-magazine-3.jpg" class="img-responsive" alt="הטכנולוגיה המהפכנית שתניע"></a>
+
+      <div class="image_text">
+      <a href="#">
+        <a href="#"><p><span>הטכנולוגיה המהפכנית שתניע</span></p>
+        <p><span>את הרכבות בעתיד הקרוב</span></p></a>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- For Mobile -->
+
+  <div class="row mobile_enabled">
+    <div class="mobile_view">
+      <a href="#"><img src="images/next-1.png" class="arraw_right" alt="previous"></a>
+      <div class="col-sm-4 section_image">
+        <a href="#"><img src="images/egged's-magazine-3.jpg" class="img-responsive" alt="הטכנולוגיה המהפכנית שתניע"></a>
+
+        <div class="image_text">
+        <a href="#">
+          <a href="#"><p><span>הטכנולוגיה המהפכנית שתניע</span></p>
+          <p><span>את הרכבות בעתיד הקרוב</span></p></a>
+          </a>
+        </div>
+      </div>
+
+      <a href="#"><img src="images/previous-1.png" class="arraw_left" alt="next"></a>
+    </div>
+  </div>
+
+
+  <!-- For Mobile -->
+
+
+
+</div>
+  
+</section>
+
+<!-- ../ Section 4 -->
+
+
+
+<!-- Section 5 -->
+<section class="section_ad mobile_disable">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="div_add">
+          <img src="images/image-1.jpg" class="img-responsive" alt="אפליקציית אגד החדשה">
+
+          <div class="badget_image">
+            <img src="images/tag.jpg" alt="אפליקציית אגד החדשה">
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-sm-6">
+        <div class="div_add">
+          <img src="images/image-2.jpg" class="img-responsive" alt="אפליקציית אגד החדשה">
+
+          <div class="badget_image">
+            <img src="images/tag.jpg" alt="אפליקציית אגד החדשה">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ../ Section 5 -->
+
+
+
+<!-- Section 6 -->
+
+<section class="post_slider">
+    <div class="container-fluid">
+      <div class="section_header text-center">
+        <a href="#"><img src="images/next-1.png" class="arraw_right mobile_disable" alt="previous"></a>
+        
+        <h2><img src="images/egged-news-X.png" alt="חדשות אגד" class="title_icon">חדשות אגד </h2>
+
+        <a href="#"><img src="images/previous-1.png" class="arraw_left mobile_disable" alt="next"></a>
+      </div>
+
+        <div class="row mobile_disable">
+          <div class="col-md-15 col-xs-15">
+            <article>
+              <a href="#"><img src="images/egged-news-1.jpg" class="img-post" alt="הסיפורים והנהגים שמאחורי ההגה שלנו"></a>
+              <div class="post-content">
+                <h5><a href="#">"הנהג שלנו" הסיפורים והנהגים שמאחורי ההגה שלנו</a></h5>
+                <p>המרכז ההיסטורי של אגד בחולון מציע בילוי מרגש ונוסטלגי במהלך חול המועד פסח...</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-15 col-xs-15">
+            <article>
+              <a href="#"><img src="images/egged-news-2.jpg" class="img-post" alt="לכבוד יום האישה הבינלאומי"></a>
+              <div class="post-content">
+                <h5><a href="#">לכבוד יום האישה הבינלאומי - ראיון עם שירה בנימין...</a></h5>
+                <p>המרכז ההיסטורי של אגד בחולון מציע בילוי מרגש ונוסטלגי במהלך חול המועד פסח... </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-15 col-xs-15">
+            <article>
+              <a href="#"><img src="images/egged-news-3.jpg" class="img-post" alt="בוחנים ספקים נוספים לאוטובוסים חשמליים שיצטרפו למערך"></a>
+              <div class="post-content">
+                <h5><a href="#">בוחנים ספקים נוספים לאוטובוסים חשמליים שיצטרפו למערך</a></h5>
+                <p>עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים...</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-15 col-xs-15">
+            <article>
+              <a href="#"><img src="images/egged-news-4.jpg" class="img-post" alt="כל מה שאנחנו מבקשים זה לשוב הביתה בשלום"></a>
+              <div class="post-content">
+                <h5><a href="#"> כל מה שאנחנו מבקשים זה לשוב הביתה בשלום </a></h5>
+                <p>טמסה מסניף לוד מספר: "הנוסע עמד בתחנה ועישן. הוא עלה לאוטובוס ובחר לנשוף...</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-15 col-xs-15">
+            <article>
+              <a href="#"><img src="images/egged-news-5.jpg" class="img-post" alt="יש נמל תעופה חדש ויש דרך חדשה ונוחה להגיע אליו"></a>
+              <div class="post-content">
+                <h5><a href="#"> יש נמל תעופה חדש ויש דרך חדשה ונוחה להגיע אליו </a></h5>
+                <p>עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים...</p>
+              </div>
+            </article>    
+          </div>      
+        </div>
+
+
+        <!-- For Mobile -->
+
+        <div class="row mobile_enabled">
+          <div class="mobile_post">
+            <a href="#"><img src="images/next-1.png" class="arraw_right" alt="previous"></a>
+
+            <article>
+              <a href="#"><img src="images/egged-news-1.jpg" class="img-post" alt="הסיפורים והנהגים שמאחורי ההגה שלנו"></a>
+              <div class="post-content">
+                <h5><a href="#">"הנהג שלנו" הסיפורים והנהגים שמאחורי ההגה שלנו</a></h5>
+                <p>המרכז ההיסטורי של אגד בחולון מציע בילוי מרגש ונוסטלגי במהלך חול המועד פסח...</p>
+              </div>
+            </article>
+
+            <a href="#"><img src="images/previous-1.png" class="arraw_left" alt="next"></a>
+          </div>
+        </div>
+
+        <!-- For Mobile -->
+
+    </div>
+</section>
+
+<!-- ../ Section 6 -->
+
+<!-- Ad Section For Mobile -->
+
+<section class="mobile_ad mobile_enabled">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="div_add">
+            <img src="images/mobile-ad.jpg" class="img-responsive" alt="אפליקציית אגד החדשה">
+          </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ad Section For Mobile -->
+
+<!-- Last Section -->
+
+<div class="last-section ">
+  
+  <div class="container-fluid">
+    <div class="row mobile_disable">
+      <div class="col-sm-6 gridone">
+        <div class="title firsttitle">
+          <h3><span>כרזות ופרסומים מהעבר</span></h3>
+        </div>
+        <div class="row margintopbottom">
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-1.jpg" class="img-responsive" alt="כרזות ופרסומים מהעבר">
+          </div>
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-2.jpg" class="img-responsive" alt="כרזות ופרסומים מהעבר">
+          </div>
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-3.jpg" class="img-responsive" alt="כרזות ופרסומים מהעבר">
+          </div>
+        </div>
+        <div class="row margintopbottom">
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-4.jpg" class="img-responsive" alt="כרזות ופרסומים מהעבר">
+          </div>
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-5.jpg" class="img-responsive" alt="כרזות ופרסומים מהעבר">
+          </div>
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-6.jpg" class="img-responsive" alt="כרזות ופרסומים מהעבר">
+          </div>
+        </div>
+        <div class="link">
+          <a href="#">לכל הכרזות</a>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="title secondtitle">
+          <h3><span>היו זמנים</span></h3>
+        </div>
+        <div class="row margintop">
+          <div class="col-sm-3 ">
+            <figure><img src="images/2017.png" class="img-responsive" alt="ומה אגד עשה למען המדינה?">
+              <figcaption>
+                <h4>2017</h4>
+                <p>ומה אגד עשה
+                למען המדינה?</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-sm-1 nopadding">
+            <div class="connecting_section">
+              <hr><span class="bold_dot_1"></span><span class="bold_dot_2 "></span>
+            </div>
+          </div>
+          <div class="col-sm-3 ">
+            <figure><img src="images/2012.png" class="img-responsive" alt="איפה הימים של הקייטנות?">
+              <figcaption>
+                <h4>2012</h4>
+                <p>איפה הימים
+                של הקייטנות?</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-sm-1 nopadding">
+            <div class="connecting_section">
+              <hr><span class="bold_dot_1"></span><span class="bold_dot_2"></span>
+            </div>
+          </div>
+          <div class="col-sm-3 ">
+            <figure><img src="images/2009.png" class="img-responsive" alt="70 שנות רכש אוטובוסים">
+              <figcaption>
+                <h4>2009</h4>
+                <p>70 שנות רכש
+                אוטובוסים</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+          <div class="row years">
+            <div class="col-sm-12">
+              <ul class="years_nav">
+                <li><a href="#"><img src="images/next-1.png" alt="previous"></a></li>
+                <li><a href="#">2000</a></li>
+                <li><a href="#">2005</a></li>
+                <li><a href="#">2010<span id="triangle-up"></span></a></li>
+                <li><a href="#">2015</a></li>
+                <li><a href="#">2019</a></li>
+                <li><a href="#"><img src="images/previous-1.png" alt="previous"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="link">
+            <a href="">ההיסטוריה שלנו</a>
+          </div>  
+        </div>      
+      </div>
+
+
+      <!-- Mobile_view -->
+      <div class="row mobile_enabled">
+
+        <div class="col-sm-6">
+        <div class="title secondtitle">
+          <h3><span>היו זמנים</span></h3>
+        </div>
+        <div class="row margintop">
+          <div class="col-sm-1 col-xs-3 nopadding">
+            <div class="connecting_section">
+              <hr><span class="bold_dot_1"></span>
+            </div>
+          </div>
+          <div class="col-sm-3 col-xs-6">
+            <figure><img src="images/2012.png" class="img-responsive" alt="איפה הימים של הקייטנות?">
+              <figcaption>
+                <h4>2012</h4>
+                <p>איפה הימים <br>
+                של הקייטנות?</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-sm-1 nopadding col-xs-3">
+            <div class="connecting_section">
+              <span class="bold_dot_2"></span>
+            </div>
+          </div>
+          
+        </div>
+          <div class="row years">
+            <div class="col-sm-12 mobile_nav">
+              <a href="#"><img src="images/next-1.png" class="year_arrow right_year" alt="previous"></a>
+              <ul class="years_nav">
+                <li><a href="#">2005</a></li>
+                <li><a href="#"><strong>2010</strong></a></li>
+                <li><a href="#">2015</a></li>
+              </ul>
+              <a href="#"><img src="images/previous-1.png" class="year_arrow left_year" alt="next"></a>
+            </div>
+          </div>
+          <div class="link">
+            <a href="">ההיסטוריה שלנו</a>
+          </div>  
+        </div>  
+
+
+      <div class="col-sm-6 gridone">
+        <div class="title firsttitle">
+          <h3><span>כרזות ופרסומים מהעבר</span></h3>
+        </div>
+        <div class="row margintopbottom">
+          <div class="col-sm-4 col-xs-6">
+            <img src="images/posters-and-publications-1.jpg" class="img-responsive" alt="כרזות ופרסומים מהעבר">
+          </div>
+          <div class="col-sm-4 col-xs-6">
+            <img src="images/posters-and-publications-2.jpg" class="img-responsive" alt="כרזות ופרסומים מהעבר">
+          </div>
+        </div>
+
+      </div>
+          
+      </div>
+      <!-- Mobile View -->
+
+
+
+   </div>
+ </div>
+
+
+<!-- ../ Last Section -->
+
+
+
+<!-- footer -->
+
+<footer>
+  
+  <div class="container-fluid">
+    <div class="row footerfirst">
+      <div class="col-sm-2 mobile_disable">
+        <h4>שירות לקוחות</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>שאלות נפוצות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>צור קשר</span></a>
+          </li>
+          <li>
+            <a href="#"><span>תשלום קנס</span></a>
+          </li>
+          <li>
+            <a href="#"><span>פנייה אל "רב-קו אונליין</span></a>
+          </li>
+          <li>
+            <a href="#"><span>קישורים שימושיים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אמנת שירות</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>חדשות והטבות</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>מה חדש?</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הודעות לעיתונות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הטבות ללקוחותינו</span></a>
+          </li>
+        </ul>
+        <h4>תיירות</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>"אגד הסעים תיור ונופש"</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הזמנת אוטובוס</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הזמנת מיניבוס או ואן</span></a>
+          </li>
+          <li>
+            <a href="#"><span>המרכז ההיסטורי של אגד</span></a>
+          </li>
+          <li>
+            <a href="#"><span>נופש בארץ</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>אודותינו</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>מי אנחנו</span></a>
+          </li>
+          <li>
+            <a href="#"><span>חברות בנות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>בטיחות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>דרושים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אחריות תאגידית</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אגד והקהילה</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אגד והסביבה</span></a>
+          </li>
+          <li>
+            <a href="#"><span>האנשים שלנו</span></a>
+          </li>
+          <li>
+            <a href="#"><span>היו זמנים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>גלריית האוטובוסים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>פרסומים מהעבר</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>כרטיסים ושירותים</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>רכישת כרטיסים לקווי אילת</span></a>
+          </li>          
+          <li>
+            <a href="#"><span>כרטיסים לקווים 800 ו 870</span></a>
+          </li>
+          <li>
+            <a href="#"><span>כרטיסים לקו 421 לים המלח</span></a>
+          </li>
+          <li>
+            <a href="#"><span>טעינת רב-קו</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הזמן מונית 5657*</span></a>
+          </li>
+          <li>
+            <a href="#"><span>המכללות לתחבורה</span></a>
+          </li>
+          <li>
+            <a href="#"><span>שירותי משק לאוטובוסים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>מכירת אוטובוסים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הרשת האלחוטית שלנו</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אגד בגד</span></a>
+          </li>
+          <li>
+            <a href="#"><span>כאשר</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>מידע לנוסע</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>מידע על קווי אגד</span></a>
+          </li>
+          <li>
+            <a href="#"><span>טלפונים וכתובות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>עדכוני תנועה</span></a>
+          </li>
+          <li>
+            <a href="#"><span>נגישות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אבידות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>מטען, עגלות ובעלי חיים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>מי זכאי להנחות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>כרטיסים מוזלים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>ערך צבור</span></a>
+          </li>    
+
+          <li>
+            <a href="#"><span>חופשי חודשי, שבועי ויומי</span></a>
+          </li>
+          <li>
+            <a href="#"><span>רב-קו</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <div class="social_heading">
+          <span>LETS GET SOCIAL</span>
+          <img src="images/s-x.png" class="img-responsive socialheadingimage mobile_disable">
+        </div>
+          <ul class="footericonbox">
+            <li><i class="fa fa-angle-left footerleftarrow"></i><a href=""><span>אנחנו בפייסבוק</span></a><a href=""><img src="images/facebook.png" class="img-responsive footersocialicon"></a></li>
+            <li><i class="fa fa-angle-left footerleftarrow"></i><a href=""><span>אנחנו ביוטיוב</span></a><a href=""><img src="images/you-tube.png" class="img-responsive footersocialicon"></a></li>
+            <li><i class="fa fa-angle-left footerleftarrow"></i><a href=""><span>אנחנו באינסטגרם</span></a><a href=""><img src="images/instagram.png" class="img-responsive footersocialicon"></a></li>
+          </ul>
+      </div>
+
+    </div>
+
+    <div class="row mobile_enabled app_store">
+      <div class="col-xs-12">
+        <div class="link_ul">
+        <ul class="list_footer">
+          <li><a href="#"><i class="fa fa-angle-left"></i>מידע לנוסע</a></li>
+          <li><a href="#"><i class="fa fa-angle-left"></i>כרטיסים ושירותים</a></li>
+          <li><a href="#"><i class="fa fa-angle-left"></i>אודותינו</a></li>
+          <li><a href="#"><i class="fa fa-angle-left"></i>תיירות</a></li>
+          <li><a href="#"><i class="fa fa-angle-left"></i>חדשות והטבות</a></li>
+          <li><a href="#"><i class="fa fa-angle-left"></i>שירות לקוחות</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="text-center">
+        <h2>להורדת אפליקציית אגד</h2>
+        <p>לחץ על הכפתור המתאים</p>
+      </div>
+      
+      <div class="col-xs-6">
+        <img src="images/apple-app-store.png">
+      </div>
+      <div class="col-xs-6">
+        <img src="images/android-app.png">
+      </div>
+    </div>
+
+
+    <div class="row footersecond">
+      <div class="col-sm-3">
+        <ul class="bottom_list firstlist">
+              <li>
+                <a href="#"><span>עיצוב: Layer. Digital Studio</span></a>
+              </li>
+          <li>
+                <a href="#"><span>אפיון ופיתוח: ATP-LOGIC</span></a>
+              </li> 
+            </ul>
+      </div>
+      <div class="col-sm-4">
+        <ul class="bottom_list secondlist">
+              <li>
+                <a href="#"><span>© אגד תחבורה בע”מ 2019</span></a>
+              </li>
+          <li>
+                <a href="#"><span>פרטיות</span></a>
+              </li> 
+          <li>
+                <a href="#"><span>נגישות</span></a>
+              </li> 
+          <li>
+                <a href="#"><span>תנאי שימוש באתר</span></a>
+              </li> 
+            </ul>
+      </div>
+      <div class="col-sm-5 mobile_disable">
+        <ul class="bottom_list thirdlist">
+          <li>
+                <a href="#"><img src="images/s-you-tube.png" class="img-responsive footersocialicon" alt="youtube"></a>
+              </li> 
+          <li>
+                <a href="#"><img src="images/twitter.png" class="img-responsive footersocialicon" alt="twitter"></a>
+              </li> 
+              <li>
+                <a href="#"><img src="images/s-instagram.png" class="img-responsive footersocialicon" alt="instagram"></a>
+              </li> 
+          <li>
+                <a href="#"><img src="images/flickr.png" class="img-responsive footersocialicon" alt="flickr"></a>
+              </li> 
+              <li>
+                <a href="#"><img src="images/s-facebook.png" class="img-responsive footersocialicon" alt="facebook"></a>
+              </li>  
+              <li>
+               <a href="#"><img src="images/facebook-2.png" class="img-responsive" alt="facebook"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/facebook-1.png" class="img-responsive" alt="facebook"></a>
+              </li>     
+            </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<!-- ../ Footer -->
+
+
+
+</body>
+</html>

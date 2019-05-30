@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="EN">
+<head>
+  <title>ATP-Logic</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main_en.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+ // Defining a function to set size for #hero 
+    function fullscreen(){
+        jQuery('.banner_image img').css({
+           /* width: jQuery(window).width(),*/
+            height: jQuery(window).height()
+        });
+    }
+  
+    fullscreen();
+
+  // Run the function in case of window resize
+  jQuery(window).resize(function() {
+       fullscreen();         
+    });
+
+
+
+
+  /*Video Play Pause*/
+
+  var vid = document.getElementById("video_section");
+  var pauseButton = document.querySelector("#pause #play");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+
+
+});
+</script>
+
+
+
+</head>
+<body>
+
+<div class="hero">
+   <div class="banner_image">
+        <video autoplay loop muted class="wrapper__video" id="video_section" poster="images/banner-2.jpg">
+            <source src="http://vimeo-hp-videos.global.ssl.fastly.net/3/3.mp4">
+        </video> 
+    </div>
+
+<!-- Header -->
+<header>
+  
+  <div class="container-fluid">
+    <div class="row desktop_header">
+
+      <div class="col-xs-3 first-col">
+        <div class="list_type">
+          <ul>
+            <li><a href="index1.html">ru</a></li>
+            <li><a href="index1_en.html">en</a></li>
+          </ul>
+        </div>
+        <div class="search_icon">
+          <img src="images/search.png" alt="search">
+        </div>
+      </div>
+
+      <div class="col-xs-6 mid-col">
+        <ul class="head_icon">
+          <li>
+            <a href="#"><img src="images/passenger-Information.png" class="img-responsive" alt="Information"><span>Information</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/purchase-tickets.png" class="img-responsive" alt="Tickets"><span>Tickets</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/about.png" class="img-responsive" alt="About"><span>About</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/contact-us.png" class="img-responsive" alt="Contact"><span>Contact</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/more.png" class="img-responsive" alt="Menu"><span>Menu</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-xs-3 last-col">
+        <div class="image_icon">
+          <a href="#"><img src="images/x.png" alt=""></a>
+        </div>
+        <div class="list_type_last">
+          <ul>
+            <li><a href="#"><img src="images/a.png" alt=""></a></li>
+            <li><a href="#"><span>A</span>A</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="mobile_header">
+      
+      <div class="row">
+        <div class="col-xs-4">
+
+          <div class="menu_bar">
+            <button type="button" class="navbar-toggle"> 
+              <span class="icon-bar"></span>  
+              <span class="icon-bar"></span>  
+              <span class="icon-bar"></span> 
+            </button>
+          </div>
+          
+          <div class="search">
+            <i class="fas fa-search"></i>
+          </div>
+          
+          
+        </div>
+
+        <div class="col-xs-4">
+          <div class="mobile_icon">
+            <a href="#"><img src="images/s-x.png" class="moblileicon"></a>
+          </div>
+        </div>
+
+        <div class="col-xs-4">
+          <div class="language_div">
+            <div class="select_language">
+              <form>
+                <div class="form-group">
+                  <select class="form-control" id="sel1">
+                    <option value="he"><a href="#">he</a></option>
+                    <option value="en"><a href="#">en</a></option>
+                  </select>
+                </div>
+              </form>
+            </div>  
+
+            <a href="index1.html" class="one"><span>A</span>A</a>
+            
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ../ Header -->
+
+<!-- mobile -->
+
+<div class="banner_indicator mobile_enabled">
+        <a href="#"><img src="images/pause.png" alt="pause"></a>
+        <a href="#"><img src="images/next.png" alt="next"></a>
+        <a href="#"><img src="images/previous.png" alt="previous"></a>
+</div>
+<!-- Mobile -->
+
+
+<!-- Banner -->
+
+<section class="banner">
+
+  <div class="banner_inner">
+      
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-sm-12">
+
+              <div class="banner_specialisation mobile_disable">
+                <h3>Journey Planner</h3>
+                <ul>
+                  <li><span><img src="images/how-do.png" alt="How do I get from ..."></span>How do I get from ...</li>
+                  <li><span><img src="images/search-by.png" alt="Search by destination"></span>Search by destination</li>
+                  <li><span><img src="images/realtime-search.png" alt="Live Search"></span>Live Search</li>
+                  <li><span><img src="images/search-by-line.png" alt="Search by line"></span>Search by line</li>
+                </ul>
+              </div>
+
+              <div class="banner_header">
+                <h1>Leading the</h1>
+                <h1>Future transport</h1>
+              </div>
+
+              <div class="banner_indicator mobile_disable">
+                <a href="#"><img src="images/pause.png" alt="pause"></a>
+                <a href="#"><img src="images/next.png" alt="next"></a>
+                <a href="#"><img src="images/previous.png" alt="previous"></a>
+              </div>
+          </div>
+        </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+
+<!-- ../ Banner -->
+
+</div>
+
+<!-- Section 2 -->
+
+<section class="section_post mobile_disable">
+  <div class="container-fluid">
+    <div class="row">
+      
+      <div class="col-md-15 col-xs-15">
+          <article>
+            <div class="post_head">
+                <span><img src="images/egged-europe.png" alt="Egged Europe"></span>
+              Egged Europe
+              <a href="#"><span class="icon_arrow"><i class="fas fa-chevron-right"></i></span></a>
+            </div>
+            <img src="images/egged-europe-image.jpg" class="post_img" alt="Egged Europe">
+          </article>
+      </div>
+
+      <div class="col-md-15 col-xs-15">
+          <article>
+            <div class="post_head">
+                <a href="#"><span><img src="images/service-and-maintenance.png" alt="Maintenance"></span></a>
+              Maintenance
+              <a href="#"><span class="icon_arrow"><i class="fas fa-chevron-right"></i></span></a>
+            </div>
+            <img src="images/service-and-maintenance-image.jpg" class="post_img" alt="Maintenance">
+          </article>
+      </div>
+
+      <div class="col-md-15 col-xs-15">
+          <article>
+            <div class="post_head">
+                <span><img src="images/transportation.png" alt="Travel & Tour"></span>
+              Travel & Tour
+              <a href="#"><span class="icon_arrow"><i class="fas fa-chevron-right"></i></span></a>
+            </div>
+            <img src="images/transportation-image.jpg" class="post_img" alt="Travel & Tour">
+          </article>
+      </div>
+
+      <div class="col-md-15 col-xs-15">
+          <article>
+            <div class="post_head">
+                <span><img src="images/light-trains.png" alt="Light Trains"></span>
+              Light Trains
+              <a href="#"><span class="icon_arrow"><i class="fas fa-chevron-right"></i></span></a>
+            </div>
+            <img src="images/light-trains-image.jpg" class="post_img" alt="Light Trains">
+          </article>
+      </div>
+
+      <div class="col-md-15 col-xs-15">
+          <article>
+            <div class="post_head">
+                <span><img src="images/public-transport.png" alt="Public Bus"></span>
+              Public bus
+              <a href="#"><span class="icon_arrow"><i class="fas fa-chevron-right"></i></span></a>
+            </div>
+            <img src="images/public-transport-image.jpg" class="post_img image_public_transport" alt="Public bus">
+          </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Mobile Section -->
+
+<section class="mobile_enabled">
+  <div class="container-fluid">
+    <div class="row">
+      <article class="icon_article">
+        
+          <h4> <span><img src="images/public-transport.png" alt="Public bus"></span><a href="#">Public bus <img class="readmore" src="images/arrow.png" alt="readmore"></a></h4>
+      </article>
+      <article class="icon_article">
+          
+         <h4><span><img src="images/light-trains.png" alt="Light Trains"></span><a href="#">Light Trains<img class="readmore" src="images/arrow.png" alt="readmore"></a></h4>
+      </article>
+      <article class="icon_article">
+         
+         <h4><span><img src="images/transportation.png" alt="Travel & Tour"></span><a href="#">Travel & Tour<img class="readmore" src="images/arrow.png" alt="readmore"></a></h4>
+      </article>
+      <article class="icon_article">
+         <h4><span><img src="images/service-and-maintenance.png" alt="Maintenance"></span><a href="#">Maintenance<img class="readmore" src="images/arrow.png" alt="readmore"></a></h4>
+      </article>
+      <article class="icon_article">
+          <h4><span><img src="images/egged-europe.png" alt="Egged Europe"></span><a href="#">Egged Europe<img class="readmore" src="images/arrow.png" alt="readmore"></a></h4>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ../ Mobile Section -->
+
+
+<!-- ../ Section 2 -->
+
+
+
+<!-- section popup -->
+
+
+<section class="popup mobile_enabled">
+  <div class="container-fluid">
+    <!-- Trigger the modal with a button -->
+    <div class="find_ride">
+    <button type="button" class="ride_panel" data-toggle="modal" data-target="#myModal"><img src="images/add.png"></button>
+      <p>Find A<br> Ride</p>
+      <p class="image_box"><img src="images/map-icon.png" class="ride_icon"> </p> 
+      
+      
+    </div>
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+
+        <button type="button" class="close" data-dismiss="modal"><img src="images/cross.png"></button>
+          <div class="banner_specialisation">
+                <h3>Journey Planner</h3>
+                <ul>
+                  <li><span><img src="images/how-do.png" alt="How do I get from ..."></span>How do I get from ...</li>
+                  <li><span><img src="images/search-by.png" alt="Search by destination"></span>Search by destination</li>
+                  <li><span><img src="images/realtime-search.png" alt="Live Search"></span>Live Search</li>
+                  <li><span><img src="images/search-by-line.png" alt="Search by line"></span>Search by line</li>
+                </ul>
+          </div>
+      
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- section popup -->
+
+
+<!-- Section 3 -->
+
+<section class="section3">
+
+<div class="container-fluid">
+  <div class="row mobile_disable">
+    <div class="col-sm-10 notification_div">
+      <div class="row">
+        <a href="#"><img src="images/next-1.png" class="arraw_right" alt="previous"></a>
+
+        <article>
+          <div class="notify_inner">
+            <p><strong>16:31 <span>|</span> 03.04.2019 </strong></p>
+            <p>Tel Aviv-Jaffa, Night works made the 762-335 lanes stop today...</p>
+            <p><a href="#"><strong>Read More</strong></a> &nbsp;&nbsp;<img src="images/arrow.png" alt="readmore"></p>
+          </div>
+        </article>
+        
+        <article>
+          <div class="notify_inner">
+            <p><strong>16:31 <span>|</span> 03.04.2019 </strong></p>
+            <p>Tel Aviv-Jaffa, Night works made the 762-335 lanes stop today...</p>
+            <p><a href="#"><strong>Read More</strong></a> &nbsp;&nbsp;<img src="images/arrow.png" alt="readmore"></p>
+          </div>
+        </article>
+
+        <article>
+          <div class="notify_inner">
+            <p><strong>16:31 <span>|</span> 03.04.2019 </strong></p>
+            <p>Tel Aviv-Jaffa, Night works made the 762-335 lanes stop today...</p>
+            <p><a href="#"><strong>Read More</strong></a> &nbsp;&nbsp;<img src="images/arrow.png" alt="readmore"></p>
+          </div>
+        </article>
+
+        <article>
+          <div class="notify_inner">
+            <p><strong>16:31 <span>|</span> 03.04.2019 </strong></p>
+            <p>Tel Aviv-Jaffa, Night works made the 762-335 lanes stop today...</p>
+            <p><a href="#"><strong>Read More</strong></a> &nbsp;&nbsp;<img src="images/arrow.png" alt="readmore"></p>
+          </div>
+        </article>
+
+        <a href="#"><img src="images/previous-1.png" class="arraw_left" alt="next"></a>
+
+      </div>
+    </div>
+    <div class="col-sm-2 text-center">
+      <div class="div_container">
+        <p class="text1">News</p>
+      <p class="text2">Flash</p>
+
+      <a href="#" class="btn btn-primary badget_btn">All News &nbsp;&nbsp;<img src="images/for-all-updates.png" alt="All News"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- For Mobile Only -->
+  <div class="row mobile_enabled">
+    <div class="col-xs-12 notification_div text-center">
+      <div class="row">
+        <a href="#"><img src="images/next-1.png" class="arraw_right" alt="previous"></a>
+        <article>
+          <div class="notify_inner">
+            <p><strong>16:31 <span>|</span> 03.04.2019 </strong></p>
+            <p>Tel Aviv-Jaffa, Night works made the 762-335 lanes stop today...</p>
+            <p><a href="#"><strong>Read More</strong></a> &nbsp;&nbsp;<img src="images/arrow.png" alt="readmore"></p>
+          </div>
+        </article>
+        <a href="#"><img src="images/previous-1.png" class="arraw_left" alt="next"></a>
+        <div class="text-center">
+          <a href="#" class="btn btn-primary badget_btn">All News</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ../ For Mobile Only -->
+
+
+
+</div>
+  
+</section>
+
+<!-- ../ Section 3 -->
+
+
+<!-- Section 4 -->
+
+<section id="section4">
+
+<div class="container-fluid">
+    <div class="section_header text-center">
+      <h2>Egged magazine</h2>
+      <p>Transportation Tech & Updates</p>
+    </div>
+  <div class="row mobile_disable">
+    <div class="col-sm-4 section_image">
+      <a href="#"><img src="images/egged's-magazine-1.jpg" class="img-responsive" alt="The Revolutionary technology"></a>
+
+      <div class="image_text">
+        <a href="#"><p><span>The Revolutionary technology</span></p>
+        <p><span>will make trains go fast.</span></p></a>
+      </div>
+    </div>
+    <div class="col-sm-4 section_image">
+      <a href="#"><img src="images/egged's-magazine-2.jpg" class="img-responsive" alt="The Revolutionary technology"></a>
+
+      <div class="image_text">
+        <a href="#"><p><span>The Revolutionary technology</span></p>
+        <p><span>will make trains go fast.</span></p></a>
+      </div>
+    </div>
+    <div class="col-sm-4 section_image">
+      <a href="#"><img src="images/egged's-magazine-3.jpg" class="img-responsive" alt="The Revolutionary technology"></a>
+
+      <div class="image_text">
+      <a href="#">
+        <a href="#"><p><span>The Revolutionary technology</span></p>
+        <p><span>will make trains go fast.</span></p></a>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- For Mobile -->
+
+  <div class="row mobile_enabled">
+    <div class="mobile_view">
+      <a href="#"><img src="images/next-1.png" class="arraw_right" alt="previous"></a>
+      <div class="col-sm-4 section_image">
+        <a href="#"><img src="images/egged's-magazine-3.jpg" class="img-responsive" alt="הטכנולוגיה המהפכנית שתניע"></a>
+
+        <div class="image_text">
+        <a href="#">
+          <a href="#"><p><span>The Revolutionary technology</span></p>
+            <p><span>will make trains go fast.</span></p></a>
+          </a>
+        </div>
+      </div>
+
+      <a href="#"><img src="images/previous-1.png" class="arraw_left" alt="next"></a>
+    </div>
+  </div>
+
+
+  <!-- For Mobile -->
+
+
+
+</div>
+  
+</section>
+
+<!-- ../ Section 4 -->
+
+
+
+<!-- Section 5 -->
+<section class="section_ad mobile_disable">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="div_add">
+          <img src="images/image-1.jpg" class="img-responsive" alt="Ad image">
+
+          <div class="badget_image">
+            <img src="images/tag.jpg" alt="Ad image">
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-sm-6">
+        <div class="div_add">
+          <img src="images/image-2.jpg" class="img-responsive" alt="Ad image">
+
+          <div class="badget_image">
+            <img src="images/tag.jpg" alt="Ad image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ../ Section 5 -->
+
+
+
+<!-- Section 6 -->
+
+<section class="post_slider">
+    <div class="container-fluid">
+      <div class="section_header text-center">
+        <a href="#"><img src="images/next-1.png" class="arraw_right mobile_disable" alt="previous"></a>
+        
+        <h2><img src="images/egged-news-X.png" alt="חדשות אגד" class="title_icon">Egged News</h2>
+
+        <a href="#"><img src="images/previous-1.png" class="arraw_left mobile_disable" alt="next"></a>
+      </div>
+
+        <div class="row mobile_disable">
+          <div class="col-md-15 col-xs-15">
+            <article>
+              <a href="#"><img src="images/egged-news-1.jpg" class="img-post" alt="The Driver is part of the family"></a>
+              <div class="post-content">
+                <h5><a href="#">The Driver is part of the family and all of us in Israel Camapign</a></h5>
+                <p>Egged's Historic Center in Holon offers an entertainment Exciting and nostalgic...</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-15 col-xs-15">
+            <article>
+              <a href="#"><img src="images/egged-news-2.jpg" class="img-post" alt="The Driver is part of the family"></a>
+              <div class="post-content">
+                <h5><a href="#">The Driver is part of the family and all of us in Israel Camapign</a></h5>
+                <p>Egged's Historic Center in Holon offers an entertainment Exciting and nostalgic...</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-15 col-xs-15">
+            <article>
+              <a href="#"><img src="images/egged-news-3.jpg" class="img-post" alt="The Driver is part of the family"></a>
+              <div class="post-content">
+                <h5><a href="#">The Driver is part of the family and all of us in Israel Camapign</a></h5>
+                <p>Egged's Historic Center in Holon offers an entertainment Exciting and nostalgic...</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-15 col-xs-15">
+            <article>
+              <a href="#"><img src="images/egged-news-4.jpg" class="img-post" alt="The Driver is part of the family"></a>
+              <div class="post-content">
+                <h5><a href="#">The Driver is part of the family and all of us in Israel Camapign</a></h5>
+                <p>Egged's Historic Center in Holon offers an entertainment Exciting and nostalgic...</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-15 col-xs-15">
+            <article>
+              <a href="#"><img src="images/egged-news-5.jpg" class="img-post" alt="The Driver is part of the family"></a>
+              <div class="post-content">
+                <h5><a href="#">The Driver is part of the family and all of us in Israel Camapign</a></h5>
+                <p>Egged's Historic Center in Holon offers an entertainment Exciting and nostalgic...</p>
+              </div>
+            </article>    
+          </div>      
+        </div>
+
+
+        <!-- For Mobile -->
+
+        <div class="row mobile_enabled">
+          <div class="mobile_post">
+            <a href="#"><img src="images/next-1.png" class="arraw_right" alt="previous"></a>
+
+            <article>
+              <a href="#"><img src="images/egged-news-1.jpg" class="img-post" alt="The Driver is part of the family"></a>
+              <div class="post-content">
+                <h5><a href="#">The Driver is part of the family and all of us in Israel Camapign</a></h5>
+                <p>Egged's Historic Center in Holon offers an entertainment Exciting and nostalgic...</p>
+              </div>
+            </article>
+
+            <a href="#"><img src="images/previous-1.png" class="arraw_left" alt="next"></a>
+          </div>
+        </div>
+
+        <!-- For Mobile -->
+
+    </div>
+</section>
+
+<!-- ../ Section 6 -->
+
+<!-- Ad Section For Mobile -->
+
+<section class="mobile_ad mobile_enabled">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="div_add">
+            <img src="images/mobile-ad.jpg" class="img-responsive" alt="Egged">
+          </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ad Section For Mobile -->
+
+<!-- Last Section -->
+
+<div class="last-section ">
+  
+  <div class="container-fluid">
+    <div class="row mobile_disable">
+      <div class="col-sm-6 gridone">
+        <div class="title firsttitle">
+          <h3><span>Past Posters</span></h3>
+        </div>
+        <div class="row margintopbottom">
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-1.jpg" class="img-responsive" alt="Past Posters">
+          </div>
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-2.jpg" class="img-responsive" alt="Past Posters">
+          </div>
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-3.jpg" class="img-responsive" alt="Past Posters">
+          </div>
+        </div>
+        <div class="row margintopbottom">
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-4.jpg" class="img-responsive" alt="Past Posters">
+          </div>
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-5.jpg" class="img-responsive" alt="Past Posters">
+          </div>
+          <div class="col-sm-4">
+            <img src="images/posters-and-publications-6.jpg" class="img-responsive" alt="Past Posters">
+          </div>
+        </div>
+        <div class="link">
+          <a href="#">All Posters</a>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="title secondtitle">
+          <h3><span>The Old Days</span></h3>
+        </div>
+        <div class="row margintop">
+          <div class="col-sm-3 ">
+            <figure><img src="images/2017.png" class="img-responsive" alt="70 Years of transportation">
+              <figcaption>
+                <h4>2017</h4>
+                <p>70 Years of transportation</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-sm-1 nopadding">
+            <div class="connecting_section">
+              <hr><span class="bold_dot_1"></span><span class="bold_dot_2 "></span>
+            </div>
+          </div>
+          <div class="col-sm-3 ">
+            <figure><img src="images/2012.png" class="img-responsive" alt="The good days of bus camps">
+              <figcaption>
+                <h4>2012</h4>
+                <p>The good days of bus camps</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-sm-1 nopadding">
+            <div class="connecting_section">
+              <hr><span class="bold_dot_1"></span><span class="bold_dot_2"></span>
+            </div>
+          </div>
+          <div class="col-sm-3 ">
+            <figure><img src="images/2009.png" class="img-responsive" alt="What egged have done for Israel">
+              <figcaption>
+                <h4>2009</h4>
+                <p>What egged have done for Israel</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+          <div class="row years">
+            <div class="col-sm-12">
+              <ul class="years_nav">
+                <li><a href="#"><img src="images/next-1.png" alt="previous"></a></li>
+                <li><a href="#">2000</a></li>
+                <li><a href="#">2005</a></li>
+                <li><a href="#">2010<span id="triangle-up"></span></a></li>
+                <li><a href="#">2015</a></li>
+                <li><a href="#">2019</a></li>
+                <li><a href="#"><img src="images/previous-1.png" alt="previous"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="link">
+            <a href="">Our History</a>
+          </div>  
+        </div>      
+      </div>
+
+
+      <!-- Mobile_view -->
+      <div class="row mobile_enabled">
+        <div class="col-sm-6 gridone">
+          <div class="title firsttitle">
+            <h3><span>Past Posters</span></h3>
+          </div>
+          <div class="row margintopbottom">
+            <div class="col-sm-4 col-xs-6">
+              <img src="images/posters-and-publications-1.jpg" class="img-responsive" alt="כרזות ופרסומים מהעבר">
+            </div>
+            <div class="col-sm-4 col-xs-6">
+              <img src="images/posters-and-publications-2.jpg" class="img-responsive" alt="כרזות ופרסומים מהעבר">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-6">
+          <div class="title secondtitle">
+            <h3><span>The old Days</span></h3>
+          </div>
+          <div class="row margintop">
+            <div class="col-sm-1 col-xs-3 nopadding">
+              <div class="connecting_section">
+                <hr><span class="bold_dot_1"></span>
+              </div>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <figure><img src="images/2012.png" class="img-responsive" alt="The good days of bus camps">
+                <figcaption>
+                  <h4>2012</h4>
+                  <p>The good days of bus camps</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-sm-1 nopadding col-xs-3">
+              <div class="connecting_section">
+                <span class="bold_dot_2"></span>
+              </div>
+            </div>
+            
+          </div>
+            <div class="row years">
+              <div class="col-sm-12 mobile_nav">
+                <a href="#"><img src="images/next-1.png" class="year_arrow right_year" alt="previous"></a>
+                <ul class="years_nav">
+                  <li><a href="#">2005</a></li>
+                  <li><a href="#"><strong>2010</strong></a></li>
+                  <li><a href="#">2015</a></li>
+                </ul>
+                <a href="#"><img src="images/previous-1.png" class="year_arrow left_year" alt="next"></a>
+              </div>
+            </div>
+            <div class="link">
+              <a href="">Our History</a>
+            </div>  
+          </div>  
+          
+      </div>
+      <!-- Mobile View -->
+
+
+
+   </div>
+ </div>
+
+
+<!-- ../ Last Section -->
+
+
+
+<!-- footer -->
+
+<footer>
+  
+  <div class="container-fluid">
+    <div class="row footerfirst">
+
+      <div class="col-sm-2">
+        <div class="social_heading">
+          <span>LETS GET SOCIAL</span>
+          <img src="images/s-x.png" class="img-responsive socialheadingimage">
+        </div>
+          <ul class="footericonbox">
+            <li><i class="fa fa-angle-right footerleftarrow"></i><a href=""><span>Facebook page</span></a><a href=""><img src="images/facebook.png" class="img-responsive footersocialicon"></a></li>
+            <li><i class="fa fa-angle-right footerleftarrow"></i><a href=""><span>Youtube Channel</span></a><a href=""><img src="images/you-tube.png" class="img-responsive footersocialicon"></a></li>
+            <li><i class="fa fa-angle-right footerleftarrow"></i><a href=""><span>Instagram Profile</span></a><a href=""><img src="images/instagram.png" class="img-responsive footersocialicon"></a></li>
+          </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>Information</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>Egged lines</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Phones and Addresses</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Traffic updates</span></a>
+          </li>
+          <li>
+            <a href="#"><span>accessibility</span></a>
+          </li>
+          <li>
+            <a href="#"><span>losses</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Luggage, carts and animals</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Who is entitled to discounts</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Discounted tickets</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Earned value</span></a>
+          </li>    
+
+          <li>
+            <a href="#"><span>monthly, weekly and daily</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Bus card</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>Tickets</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>Egged lines</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Phones and Addresses</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Traffic updates</span></a>
+          </li>
+          <li>
+            <a href="#"><span>accessibility</span></a>
+          </li>
+          <li>
+            <a href="#"><span>losses</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Luggage, carts and animals</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Who is entitled to discounts</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Discounted tickets</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Earned value</span></a>
+          </li>    
+
+          <li>
+            <a href="#"><span>monthly, weekly and daily</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Bus card</span></a>
+          </li>
+        </ul>
+        
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>About</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>Who we are</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Subsidiaries</span></a>
+          </li>
+          <li>
+            <a href="#"><span>safety</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Jobs</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Corporate Responsibility</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Egged and the community</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Egged and the environment</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Our people</span></a>
+          </li>
+          <li>
+            <a href="#"><span>there were times</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Bus Gallery</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Publications from the past</span></a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>Benefits</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>What's new?</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Press Releases</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Benefits to our customers</span></a>
+          </li>
+        </ul>
+        <h4>Tourism</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>Egged Tours</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Book a bus</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Order a minibus or van</span></a>
+          </li>
+          <li>
+            <a href="#"><span>The historic center of Egged</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Vacation in Israel</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>Support</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>Common questions</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Contact Us</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Payment of a fine</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Multi-line online</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Useful Links</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Service Level Agreement</span></a>
+          </li>
+        </ul>
+      </div>
+
+      
+
+    </div>
+
+    <div class="row mobile_enabled app_store">
+      <div class="col-xs-12">
+        <div class="link_ul">
+        <ul class="list_footer">
+          <li><a href="#"><i class="fa fa-angle-right"></i>Information</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i>Tickets</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i>About</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i>Tourism</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i>Benefits</a></li>
+          <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="text-center">
+        <h2>Download the Egged app</h2>
+        <p>Click the appropriate button</p>
+      </div>
+      
+      <div class="col-xs-6">
+        <img src="images/apple-app-store.png">
+      </div>
+      <div class="col-xs-6">
+        <img src="images/android-app.png">
+      </div>
+    </div>
+
+
+    <div class="row footersecond">
+      <div class="col-sm-3">
+        <ul class="bottom_list firstlist">
+              <li>
+                <a href="#"><span>Design: Layer. Digital Studio</span></a>
+              </li>
+          <li>
+                <a href="#"><span>Code: ATP-LOGIC</span></a>
+              </li> 
+            </ul>
+      </div>
+      <div class="col-sm-4">
+        <ul class="bottom_list secondlist">
+              <li>
+                <a href="#"><span>© Egged LTD 2019</span></a>
+              </li>
+          <li>
+                <a href="#"><span>Privacy</span></a>
+              </li> 
+          <li>
+                <a href="#"><span>Accessibility</span></a>
+              </li> 
+          <li>
+                <a href="#"><span>Terms of use</span></a>
+              </li> 
+            </ul>
+      </div>
+      <div class="col-sm-5 mobile_disable">
+        <ul class="bottom_list thirdlist">
+          <li>
+                <a href="#"><img src="images/s-you-tube.png" class="img-responsive footersocialicon" alt="youtube"></a>
+              </li> 
+          <li>
+                <a href="#"><img src="images/twitter.png" class="img-responsive footersocialicon" alt="twitter"></a>
+              </li> 
+              <li>
+                <a href="#"><img src="images/s-instagram.png" class="img-responsive footersocialicon" alt="instagram"></a>
+              </li> 
+          <li>
+                <a href="#"><img src="images/flickr.png" class="img-responsive footersocialicon" alt="flickr"></a>
+              </li> 
+              <li>
+                <a href="#"><img src="images/s-facebook.png" class="img-responsive footersocialicon" alt="facebook"></a>
+              </li>  
+              <li>
+               <a href="#"><img src="images/facebook-2-in.png" class="img-responsive" alt="facebook"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/facebook-1-in.png" class="img-responsive" alt="facebook"></a>
+              </li>     
+            </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<!-- ../ Footer -->
+
+
+
+</body>
+</html>

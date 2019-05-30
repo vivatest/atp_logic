@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <title>ATP-Logic</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+  <!-- Slick Slider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+
+</head>
+<body class="inner-page">
+
+<div class="hero">
+  <div class="banner_image inner_banner">
+        <img src="images/banner-2.jpg" />
+  </div>
+
+<!-- Header -->
+<header>
+  
+  <div class="container-fluid">
+    <div class="row desktop_header">
+      <div class="col-xs-3 first-col">
+        <div class="list_type">
+          <ul>
+            <li><a href="index1.html">ru</a></li>
+            <li><a href="index1_en.html">en</a></li>
+          </ul>
+        </div>
+        <div class="search_icon">
+          <img src="images/search.png" alt="search">
+        </div>
+      </div>
+
+      <div class="col-xs-6 mid-col">
+        <ul class="head_icon">
+          <li>
+            <a href="#"><img src="images/passenger-Information.png" class="img-responsive" alt="מידע לנוסע"><span>מידע לנוסע</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/purchase-tickets.png" class="img-responsive" alt="רכישת"><span>רכישת</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/about.png" class="img-responsive" alt="אודות"><span>אודות</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/contact-us.png" class="img-responsive" alt="צור קשר"><span>צור קשר</span></a>
+          </li>
+          <li>
+            <a href="#"><img src="images/more.png" class="img-responsive" alt="עוד"><span>עוד</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-xs-3 last-col">
+        <div class="image_icon">
+          <a href="#"><img src="images/x.png" alt=""></a>
+        </div>
+        <div class="list_type_last">
+          <ul>
+            <li><a href="#"><img src="images/a.png" alt=""></a></li>
+            <li><a href="#">א<span>א</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="mobile_header">
+      
+      <div class="row">
+        <div class="col-xs-4">
+
+          <div class="menu_bar">
+            <button type="button" class="navbar-toggle"> 
+              <span class="icon-bar"></span>  
+              <span class="icon-bar"></span>  
+              <span class="icon-bar"></span> 
+            </button>
+          </div>
+          
+          <div class="search">
+            <i class="fas fa-search"></i>
+          </div>
+          
+          
+        </div>
+
+        <div class="col-xs-4">
+          <div class="mobile_icon">
+            <a href="#"><img src="images/s-x.png" class="moblileicon"></a>
+          </div>
+        </div>
+
+        <div class="col-xs-4">
+          <div class="language_div">
+            <div class="select_language">
+              <form>
+                <div class="form-group">
+                  <select class="form-control" id="sel1">
+                    <option value="he"><a href="#">he</a></option>
+                    <option value="en"><a href="#">en</a></option>
+                  </select>
+                </div>
+              </form>
+            </div>  
+
+            <a href="index1_en.html" class="one">א<span>א</span></a>
+            
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ../ Header -->
+
+
+
+
+<!-- Banner -->
+
+<section class="banner">
+
+  <div class="banner_inner">
+      
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-sm-12">
+
+              <div class="banner_heading text-center text-white">
+                <h1>עדכוני תנועה</h1>
+              </div>
+
+          </div>
+        </div>
+
+      </div>
+
+   </div>
+
+</section>
+
+
+<!-- ../ Banner -->
+
+</div>
+
+<!-- section popup -->
+
+
+<section class="popup popup-view">
+  <div class="container-fluid">
+    <!-- Trigger the modal with a button -->
+    <div class="find_ride">
+    <button type="button" class="ride_panel" data-toggle="modal" data-target="#myModal"><img src="images/add.png"></button>
+      <p class="image_box"><img src="images/map-icon.png" class="ride_icon"> </p> 
+      <p>למצוא <br> נסיעה</p>
+      
+    </div>
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+
+        <button type="button" class="close" data-dismiss="modal"><img src="images/cross.png"></button>
+          <div class="banner_specialisation">
+                <h3><span> <img src="images/map-icon.png" class="ride_icon" />  </span>חיפוש נסיעה</h3>
+                <ul>
+                  <li><span><img src="images/how-do.png" alt="איך אני מגיע מ"></span>איך אני מגיע מ...</li>
+                  <li><span><img src="images/search-by.png" alt="חיפוש לפי מוצא ויעד"></span>חיפוש לפי מוצא ויעד</li>
+                  <li><span><img src="images/realtime-search.png" alt="חיפוש זמן אמת"></span>חיפוש זמן אמת</li>
+                  <li><span><img src="images/search-by-line.png" alt="חיפוש לפי קו"></span>חיפוש לפי קו</li>
+                </ul>
+          </div>
+      
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- section popup -->
+
+
+
+
+
+<div class="content">
+
+
+<!-- Section 4 -->
+
+<section id="section4">
+
+<div class="container-fluid">
+  <div class="row mobile_disable">
+    <div class="col-sm-3 section_image">
+      <a href="#"><img src="images/egged's-magazine-1.jpg" class="img-responsive" alt="קריירה לכל החיים באגד מתחילה" /></a>
+
+      <div class="image_text">
+        <a href="#"><p class="heading_span"><span>מתחילה</span></p>
+        <p><span>בצעד אחד קטן ומהיר</span></p></a>
+      </div>
+    </div>
+    <div class="col-sm-3 section_image">
+      <a href="#"><img src="images/egged's-magazine-2.jpg" class="img-responsive" alt="עוברים לתחבורה ירוקה וסביבתית" /></a>
+
+      <div class="image_text">
+        <a href="#"><p class="heading_span"><span>מתחילה</span></p>
+        <p><span>בצעד אחד קטן ומהיר</span></p></a>
+      </div>
+    </div>
+    <div class="col-sm-3 section_image">
+      <a href="#"><img src="images/egged's-magazine-3.jpg" class="img-responsive" alt="הטכנולוגיה המהפכנית שתניע" /></a>
+
+      <div class="image_text">
+      <a href="#">
+        <a href="#"><p class="heading_span"><span>מתחילה</span></p>
+        <p><span>בצעד אחד קטן ומהיר</span></p></a>
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-3 section_image">
+      <a href="#"><img src="images/egged's-magazine-1.jpg" class="img-responsive" alt="קריירה לכל החיים באגד מתחילה" /></a>
+
+      <div class="image_text">
+        <a href="#"><p class="heading_span"><span>מתחילה</span></p>
+        <p><span>בצעד אחד קטן ומהיר</span></p></a>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- For Mobile -->
+
+  <div class="row mobile_enabled">
+    <div class="mobile_view">
+      <a href="#"><img src="images/next-1.png" class="arraw_right" alt="previous"></a>
+      <div class="col-sm-4 section_image">
+        <a href="#"><img src="images/egged's-magazine-3.jpg" class="img-responsive" alt="הטכנולוגיה המהפכנית שתניע"></a>
+
+        <div class="image_text">
+        <a href="#">
+          <a href="#"><p><span>הטכנולוגיה המהפכנית שתניע</span></p>
+          <p><span>את הרכבות בעתיד הקרוב</span></p></a>
+          </a>
+        </div>
+      </div>
+
+      <a href="#"><img src="images/previous-1.png" class="arraw_left" alt="next"></a>
+    </div>
+  </div>
+
+
+  <!-- For Mobile -->
+
+
+
+</div>
+  
+</section>
+
+<!-- ../ Section 4 -->
+
+
+<div class="inner_page_content">
+<!-- Accordian -->
+<section>
+    <div class="container-fluid">
+            <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne2">
+                        <h4 class="panel-title">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne">
+                            <p><strong>03.04.2019 <span class="mid">|</span> תל אביב-יפו, עבודות לילה בקטע </strong>   <span class="text_title"> יש נמל תעופה חדש ויש דרך חדשה ונוחה</span></p>
+                          </a>
+                        </h4>
+                    </div>
+                      <div id="collapseOne2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne2">
+                        <div class="panel-body">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                        </div>
+                      </div>
+                </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo2">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo">
+                                            <p><strong>03.04.2019 <span class="mid">|</span> תל אביב-יפו, עבודות לילה בקטע </strong>   <span class="text_title"> יש נמל תעופה חדש ויש דרך חדשה ונוחה</span></p>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo2">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree2">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+                                            <p><strong>03.04.2019 <span class="mid">|</span> תל אביב-יפו, עבודות לילה בקטע </strong>   <span class="text_title"> יש נמל תעופה חדש ויש דרך חדשה ונוחה</span></p>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree2">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                    </div>
+                                </div>
+                            </div>
+                <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingfour4">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapsefour4" aria-expanded="false" aria-controls="collapseTwo">
+                                            <p><strong>03.04.2019 <span class="mid">|</span> תל אביב-יפו, עבודות לילה בקטע </strong>   <span class="text_title"> יש נמל תעופה חדש ויש דרך חדשה ונוחה</span></p>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapsefour4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfour4">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingfive5">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive5" aria-expanded="false" aria-controls="collapseTwo">
+                                            <p><strong>03.04.2019 <span class="mid">|</span> תל אביב-יפו, עבודות לילה בקטע </strong>   <span class="text_title"> יש נמל תעופה חדש ויש דרך חדשה ונוחה</span></p>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFive5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingfive5">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+    </div>
+  </section>
+
+        
+<!-- ../ Accordian -->
+
+
+<!-- Slick Slider -->
+
+<section>
+  <div class="container-fluid">
+    <div class="slider">
+      <div>
+        <div class="slide_content">
+          <div class="row">
+            <div class="col-sm-3">
+              <a href="#" class="btn btn-primary badget_btn">לכל העדכונים &nbsp;&nbsp;<img src="images/for-all-updates.png" alt="refresh"></a>
+            </div>
+
+            <div class="col-xs-6">
+              <div class="inner_content">
+                <p><b>בוחנים ספקים נוספים לאוטובוסים </b></p>
+                <p>עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.</p>
+              </div>
+            </div>
+
+            <div class="col-xs-3">
+              <img src="images/egged-news-1.jpg" class="img-responsive" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="slide_content">
+          <div class="row">
+            <div class="col-sm-3">
+              <a href="#" class="btn btn-primary badget_btn">לכל העדכונים &nbsp;&nbsp;<img src="images/for-all-updates.png" alt="refresh"></a>
+            </div>
+            
+            <div class="col-xs-6">
+              <div class="inner_content">
+                <p><b>בוחנים ספקים נוספים לאוטובוסים </b></p>
+                <p>עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.</p>
+              </div>
+            </div>
+
+            <div class="col-xs-3">
+              <img src="images/egged-news-2.jpg" class="img-responsive" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="slide_content">
+          <div class="row">
+            <div class="col-sm-3">
+              <a href="#" class="btn btn-primary badget_btn">לכל העדכונים &nbsp;&nbsp;<img src="images/for-all-updates.png" alt="refresh"></a>
+            </div>
+            
+            <div class="col-xs-6">
+              <div class="inner_content">
+                <p><b>בוחנים ספקים נוספים לאוטובוסים </b></p>
+                <p>עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.</p>
+              </div>
+            </div>
+
+            <div class="col-xs-3">
+              <img src="images/egged-news-3.jpg" class="img-responsive" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="slide_content">
+          <div class="row">
+            <div class="col-sm-3">
+              <a href="#" class="btn btn-primary badget_btn">לכל העדכונים &nbsp;&nbsp;<img src="images/for-all-updates.png" alt="refresh"></a>
+            </div>
+            
+            <div class="col-xs-6">
+              <div class="inner_content">
+                <p><b>בוחנים ספקים נוספים לאוטובוסים </b></p>
+                <p>עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.</p>
+              </div>
+            </div>
+
+            <div class="col-xs-3">
+              <img src="images/egged-news-4.jpg" class="img-responsive" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="slide_content">
+          <div class="row">
+            <div class="col-sm-3">
+              <a href="#" class="btn btn-primary badget_btn">לכל העדכונים &nbsp;&nbsp;<img src="images/for-all-updates.png" alt="refresh"></a>
+            </div>
+            
+            <div class="col-xs-6">
+              <div class="inner_content">
+                <p><b>בוחנים ספקים נוספים לאוטובוסים </b></p>
+                <p>עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.</p>
+              </div>
+            </div>
+
+            <div class="col-xs-3">
+              <img src="images/egged-news-5.jpg" class="img-responsive" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="slide_content">
+          <div class="row">
+            <div class="col-sm-3">
+              <a href="#" class="btn btn-primary badget_btn">לכל העדכונים &nbsp;&nbsp;<img src="images/for-all-updates.png" alt="refresh"></a>
+            </div>
+            
+            <div class="col-xs-6">
+              <div class="inner_content">
+                <p><b>בוחנים ספקים נוספים לאוטובוסים </b></p>
+                <p>עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.עם פתיחת נמל התעופה, הופעל מערך תחבורה ציבורית חדש לשירות התושבים והתיירים.</p>
+              </div>
+            </div>
+
+            <div class="col-xs-3">
+              <img src="images/egged-news-1.jpg" class="img-responsive" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ../Slick Slider -->
+
+
+
+<section>
+  <div class="container-fluid">
+    <div id="exTab2"> 
+      <ul class="nav nav-tabs">
+        <li class="active"> <a  href="#1" data-toggle="tab">Overview</a> </li>
+        <li> <a href="#2" data-toggle="tab">Without clearfix</a> </li>
+        <li><a href="#3" data-toggle="tab">Solution</a></li>
+      </ul>
+
+      <div class="tab-content ">
+        <div class="tab-pane active" id="1">
+          <div class="text-center tab_div"><p>Standard tab panel created on bootstrap using nav-tabs</p></div>
+          
+          <div class="table-responsive">
+            <table class="table table-bordered tab-table">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-center">#</th>
+                  <th scope="col" class="text-center">First</th>
+                  <th scope="col" class="text-center">Last</th>
+                  <th scope="col" class="text-center">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>@twitter</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>@twitter</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>@twitter</td>
+                  <td>Larry the Bird</td>
+                  <td>@twitter</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tab-footer text-center">
+            <ul>
+              <li>תל אביב-יפו, עבודות לילה בקטע</li>
+              <li>חדשות וטכנולוגיה בתחום התחבורה</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-pane" id="2">
+          <div class="text-center tab_div"><p>Standard 2 tab panel created on bootstrap using nav-tabs</p></div>
+          
+          <div class="table-responsive">
+            <table class="table table-bordered tab-table">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-center">#</th>
+                  <th scope="col" class="text-center">First</th>
+                  <th scope="col" class="text-center">Last</th>
+                  <th scope="col" class="text-center">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>@twitter</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>@twitter</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>@twitter</td>
+                  <td>Larry the Bird</td>
+                  <td>@twitter</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tab-footer text-center">
+            <ul>
+              <li>תל אביב-יפו, עבודות לילה בקטע</li>
+              <li>חדשות וטכנולוגיה בתחום התחבורה</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-pane" id="3">
+          <div class="text-center tab_div"><p>Standard 3 tab panel created on bootstrap using nav-tabs</p></div>
+          
+          <div class="table-responsive">
+            <table class="table table-bordered tab-table">
+              <thead>
+                <tr>
+                  <th scope="col" class="text-center">#</th>
+                  <th scope="col" class="text-center">First</th>
+                  <th scope="col" class="text-center">Last</th>
+                  <th scope="col" class="text-center">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>@twitter</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>@twitter</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>@twitter</td>
+                  <td>Larry the Bird</td>
+                  <td>@twitter</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tab-footer text-center">
+            <ul>
+              <li>תל אביב-יפו, עבודות לילה בקטע</li>
+              <li>חדשות וטכנולוגיה בתחום התחבורה</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  </div>
+</div>
+<!-- footer -->
+
+<footer>
+  
+  <div class="container-fluid">
+    <div class="row footerfirst">
+      <div class="col-sm-2 mobile_disable">
+        <h4>שירות לקוחות</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>שאלות נפוצות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>צור קשר</span></a>
+          </li>
+          <li>
+            <a href="#"><span>תשלום קנס</span></a>
+          </li>
+          <li>
+            <a href="#"><span>פנייה אל "רב-קו אונליין</span></a>
+          </li>
+          <li>
+            <a href="#"><span>קישורים שימושיים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אמנת שירות</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>חדשות והטבות</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>מה חדש?</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הודעות לעיתונות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הטבות ללקוחותינו</span></a>
+          </li>
+        </ul>
+        <h4>תיירות</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>"אגד הסעים תיור ונופש"</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הזמנת אוטובוס</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הזמנת מיניבוס או ואן</span></a>
+          </li>
+          <li>
+            <a href="#"><span>המרכז ההיסטורי של אגד</span></a>
+          </li>
+          <li>
+            <a href="#"><span>נופש בארץ</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>אודותינו</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>מי אנחנו</span></a>
+          </li>
+          <li>
+            <a href="#"><span>חברות בנות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>בטיחות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>דרושים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אחריות תאגידית</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אגד והקהילה</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אגד והסביבה</span></a>
+          </li>
+          <li>
+            <a href="#"><span>האנשים שלנו</span></a>
+          </li>
+          <li>
+            <a href="#"><span>היו זמנים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>גלריית האוטובוסים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>פרסומים מהעבר</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>כרטיסים ושירותים</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>רכישת כרטיסים לקווי אילת</span></a>
+          </li>          
+          <li>
+            <a href="#"><span>כרטיסים לקווים 800 ו 870</span></a>
+          </li>
+          <li>
+            <a href="#"><span>כרטיסים לקו 421 לים המלח</span></a>
+          </li>
+          <li>
+            <a href="#"><span>טעינת רב-קו</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הזמן מונית 5657*</span></a>
+          </li>
+          <li>
+            <a href="#"><span>המכללות לתחבורה</span></a>
+          </li>
+          <li>
+            <a href="#"><span>שירותי משק לאוטובוסים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>מכירת אוטובוסים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>הרשת האלחוטית שלנו</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אגד בגד</span></a>
+          </li>
+          <li>
+            <a href="#"><span>כאשר</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 mobile_disable">
+        <h4>מידע לנוסע</h4>
+        <ul class="footer_list">
+          <li>
+            <a href="#"><span>מידע על קווי אגד</span></a>
+          </li>
+          <li>
+            <a href="#"><span>טלפונים וכתובות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>עדכוני תנועה</span></a>
+          </li>
+          <li>
+            <a href="#"><span>נגישות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>אבידות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>מטען, עגלות ובעלי חיים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>מי זכאי להנחות</span></a>
+          </li>
+          <li>
+            <a href="#"><span>כרטיסים מוזלים</span></a>
+          </li>
+          <li>
+            <a href="#"><span>ערך צבור</span></a>
+          </li>    
+
+          <li>
+            <a href="#"><span>חופשי חודשי, שבועי ויומי</span></a>
+          </li>
+          <li>
+            <a href="#"><span>רב-קו</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2">
+        <div class="social_heading">
+          <span>LETS GET SOCIAL</span>
+          <img src="images/s-x.png" class="img-responsive socialheadingimage mobile_disable">
+        </div>
+          <ul class="footericonbox">
+            <li><i class="fa fa-angle-left footerleftarrow"></i><a href=""><span>אנחנו בפייסבוק</span></a><a href=""><img src="images/facebook.png" class="img-responsive footersocialicon"></a></li>
+            <li><i class="fa fa-angle-left footerleftarrow"></i><a href=""><span>אנחנו ביוטיוב</span></a><a href=""><img src="images/you-tube.png" class="img-responsive footersocialicon"></a></li>
+            <li><i class="fa fa-angle-left footerleftarrow"></i><a href=""><span>אנחנו באינסטגרם</span></a><a href=""><img src="images/instagram.png" class="img-responsive footersocialicon"></a></li>
+          </ul>
+      </div>
+
+    </div>
+
+    <div class="row mobile_enabled app_store">
+      <div class="col-xs-12">
+        <div class="link_ul">
+        <ul class="list_footer">
+          <li><a href="#"><i class="fa fa-angle-left"></i>מידע לנוסע</a></li>
+          <li><a href="#"><i class="fa fa-angle-left"></i>כרטיסים ושירותים</a></li>
+          <li><a href="#"><i class="fa fa-angle-left"></i>אודותינו</a></li>
+          <li><a href="#"><i class="fa fa-angle-left"></i>תיירות</a></li>
+          <li><a href="#"><i class="fa fa-angle-left"></i>חדשות והטבות</a></li>
+          <li><a href="#"><i class="fa fa-angle-left"></i>שירות לקוחות</a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="text-center">
+        <h2>להורדת אפליקציית אגד</h2>
+        <p>לחץ על הכפתור המתאים</p>
+      </div>
+      
+      <div class="col-xs-6">
+        <img src="images/apple-app-store.png">
+      </div>
+      <div class="col-xs-6">
+        <img src="images/android-app.png">
+      </div>
+    </div>
+
+
+    <div class="row footersecond">
+      <div class="col-sm-3">
+        <ul class="bottom_list firstlist">
+              <li>
+                <a href="#"><span>עיצוב: Layer. Digital Studio</span></a>
+              </li>
+          <li>
+                <a href="#"><span>אפיון ופיתוח: ATP-LOGIC</span></a>
+              </li> 
+            </ul>
+      </div>
+      <div class="col-sm-4">
+        <ul class="bottom_list secondlist">
+              <li>
+                <a href="#"><span>© אגד תחבורה בע”מ 2019</span></a>
+              </li>
+          <li>
+                <a href="#"><span>פרטיות</span></a>
+              </li> 
+          <li>
+                <a href="#"><span>נגישות</span></a>
+              </li> 
+          <li>
+                <a href="#"><span>תנאי שימוש באתר</span></a>
+              </li> 
+            </ul>
+      </div>
+      <div class="col-sm-5 mobile_disable">
+        <ul class="bottom_list thirdlist">
+          <li>
+                <a href="#"><img src="images/s-you-tube.png" class="img-responsive footersocialicon" alt="youtube"></a>
+              </li> 
+          <li>
+                <a href="#"><img src="images/twitter.png" class="img-responsive footersocialicon" alt="twitter"></a>
+              </li> 
+              <li>
+                <a href="#"><img src="images/s-instagram.png" class="img-responsive footersocialicon" alt="instagram"></a>
+              </li> 
+          <li>
+                <a href="#"><img src="images/flickr.png" class="img-responsive footersocialicon" alt="flickr"></a>
+              </li> 
+              <li>
+                <a href="#"><img src="images/s-facebook.png" class="img-responsive footersocialicon" alt="facebook"></a>
+              </li>  
+              <li>
+               <a href="#"><img src="images/facebook-2.png" class="img-responsive" alt="facebook"></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/facebook-1.png" class="img-responsive" alt="facebook"></a>
+              </li>     
+            </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<!-- ../ Footer -->
+
+<!-- js -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<!-- Slick Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+<!-- Custom Js -->
+<script src="js/script.js"></script>
+</body>
+</html>
